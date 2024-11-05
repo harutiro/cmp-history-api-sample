@@ -1,15 +1,17 @@
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.window.ComposeViewport
-import me.tbsten.sample.cmpHistoryApi.App
-import org.jetbrains.skiko.wasm.onWasmReady
+import androidx.navigation.compose.rememberNavController
 import kotlinx.browser.document
+import me.tbsten.sample.cmpHistoryApi.AppNavHost
+import org.jetbrains.skiko.wasm.onWasmReady
 
 @OptIn(ExperimentalComposeUiApi::class)
 fun main() {
     onWasmReady {
         val body = document.body ?: return@onWasmReady
         ComposeViewport(body) {
-            App()
+            val navController = rememberNavController()
+            AppNavHost(navController)
         }
     }
 }
