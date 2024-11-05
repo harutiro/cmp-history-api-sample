@@ -1,0 +1,11 @@
+{
+  "buildCommand": "./gradlew :composeApp:jsBrowserDistribution",
+  "devCommand": "./gradlew :composeApp:jsRun",
+  "rewrites": [
+    {
+      "source": "/((?!.*\\.js$).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "outputDirectory": "composeApp/build/dist/js/productionExecutable"
+}
