@@ -1,10 +1,10 @@
-# Compose Multiplatform Application
+# Compose for Web でブラウザのアドレスバーと Navigation Compose の route を同期させてみるサンプル
 
-### JS Browser (Experimental)
-Run the browser application: `./gradlew :composeApp:jsBrowserDevelopmentRun --continue`
-Run browser UI tests: `./gradlew :composeApp:jsBrowserTest`
+`NavController.bindBrowserUrl()` で NavController を監視し、
+[History API](https://developer.mozilla.org/ja/docs/Web/API/History_API) を使って
+ブラウザのアドレスバーに表示されるURLのパスと Navigation Compose の route を一致させてみている。
 
-### Wasm Browser (Alpha)
-Run the browser application: `./gradlew :composeApp:wasmJsBrowserDevelopmentRun --continue`
-Run browser UI tests: `./gradlew :composeApp:wasmJsBrowserTest`
+肝となるコードは以下のコミットに入っている。
 
+- [2847e31](https://github.com/TBSten/cmp-history-api-sample/commit/2847e319771cd76445cf7afeca288d7b13bbafe6)
+- [391ed61](https://github.com/TBSten/cmp-history-api-sample/commit/391ed61c5bea8b6eeb3a94a46797bc0baf8bbf36)
