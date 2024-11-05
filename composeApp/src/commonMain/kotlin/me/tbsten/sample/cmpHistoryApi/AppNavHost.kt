@@ -9,11 +9,12 @@ import me.tbsten.sample.cmpHistoryApi.page.top.TopPage
 
 @Composable
 fun AppNavHost(
+    startDestination: String,
     navController: NavHostController,
 ) {
     NavHost(
         navController = navController,
-        startDestination = "/",
+        startDestination = startDestination,
     ) {
         composable("/") {
             TopPage(
