@@ -15,3 +15,11 @@ Pods/
 *.jks
 *yarn.lock
 .vercel
+
+# `composeApp` と `build` ディレクトリを無視リストから外す
+!/composeApp/
+!/composeApp/build/
+/composeApp/build/*
+!/composeApp/build/dist/
+!/composeApp/build/dist/**/*
+
